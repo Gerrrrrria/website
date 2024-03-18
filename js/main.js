@@ -1,45 +1,29 @@
 function f1(){
-    var score = prompt("请输入成绩：");
+    var month = Number(prompt("请输入月份："));
     var msg;
-    var re = Math.floor( score / 10 );
-    if(0 <= score && score <= 100){
-        switch(re){
-            case 0:
-                msg = "不及格";
-                break;
+        switch(month){
             case 1:
-                msg = "不及格";
-                break;
-            case 2:
-                msg = "不及格";
-                break;
             case 3:
-                msg = "不及格";
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                msg = "大月";
                 break;
             case 4:
-                msg = "不及格";
-                break;
-            case 5:
-                msg = "不及格";
-                break;    
             case 6:
-                msg = "及格";
-                break;
-            case 7:
-                msg = "一般";
-                break;
-            case 8:
-                msg = "良好";
-                break;
             case 9:
-                msg = "优秀";
+            case 11:
+                msg = "小月";
                 break;
-            case 10:
-                msg = "满分！太棒了！";
+            case 2:
+                msg = "28天";
                 break;
+            default:
+                msg = "输入有误！请重新输入！"
+                
         }
-    }else{
-        msg = "成绩输入有误！请重新输入！"
-    }
+       
     alert(msg);
 }
